@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deteksi Penyakit Padi</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-seedling"></i> Deteksi Penyakit Padi</h1>
+            <p>Sistem deteksi penyakit tanaman padi menggunakan teknologi YOLOv8</p>
+        </div>
+
+        <div class="main-content">
+            <form action="/detect" method="post" enctype="multipart/form-data" id="detectForm">
+                <div class="upload-section">
+                    <div class="upload-card" id="uploadCard">
+                        <div class="upload-content">
+                            <div class="upload-icon">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                            </div>
+                            <div class="upload-text">Pilih atau seret gambar tanaman padi</div>
+                            <div class="upload-subtext">Format: JPG, PNG, GIF (Maks. 10MB)</div>
+                        </div>
+                        <input type="file" name="file" id="fileInput" accept="image/*" required>
+                    </div>
+
+                    <div class="preview-container" id="previewContainer">
+                        <img id="previewImage" class="preview-image" alt="Preview">
+                    </div>
+
+                    <button type="submit" class="detect-btn" id="detectBtn">
+                        <i class="fas fa-search"></i> Mulai Deteksi
+                    </button>
+                </div>
+            </form>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Sedang menganalisis gambar...</p>
+            </div>
+
+            {% if result %}
+            <div class="result" id="resultSection">
+                <h2><i class="fas fa-chart-line"></i> Hasil Deteksi</h2>
+                <div class="result-image">
+                    <img src="{{ result.image }}" alt="Hasil Deteksi">
+                </div>
+                <div class="result-info">
+                    <div class="info-card">
+                        <strong><i class="fas fa-tag"></i> Kelas Penyakit:</strong>
+                        <p>{{ result.class }}</p>
+                    </div>
+
+                    <div class="info-card" id="descCard">
+                        <strong><i class="fas fa-info-circle"></i> Deskripsi:</strong>
+                        <p id="descText">{{ result.info.deskripsi }}</p>
+                        <button type="button" class="more-btn" onclick="toggleDesc()">Selengkapnya</button>
+                    </div>
+
+
+                    <div class="info-card">
+                        <strong><i class="fas fa-shield-alt"></i> Pencegahan:</strong>
+                        <p>{{ result.info.pencegahan }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+    <script>
+        function toggleDesc() {
+            const descCard = document.getElementById('descCard');
+            descCard.classList.toggle('expanded');
+            const btn = descCard.querySelector('.more-btn');
+            btn.textContent = descCard.classList.contains('expanded') ? 'Tampilkan Lebih Sedikit' : 'Selengkapnya';
+        }
+    </script>
+</body>
+
+</html>

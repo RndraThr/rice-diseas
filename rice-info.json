@@ -1,0 +1,17 @@
+{
+    "blast": {
+        "deskripsi": "Penyakit blast pada padi disebabkan oleh jamur Pyricularia oryzae. Gejala ditandai dengan bercak berbentuk belah ketupat berwarna abu-abu dengan tepi coklat, biasanya pada daun, leher, dan malai. Blast dapat menyebabkan kegagalan malai berkembang, daun mengering, dan menurunkan hasil panen.",
+        "penyebab": "Infeksi jamur Pyricularia oryzae yang menyebar melalui spora pada kondisi kelembaban tinggi, suhu hangat, dan angin kencang.",
+        "pencegahan": "Gunakan varietas padi tahan blast, lakukan sanitasi lahan, pengaturan jarak tanam, pengelolaan air secara baik, pemupukan berimbang, dan aplikasi fungisida berbahan aktif triazol atau strobilurin sesuai rekomendasi."
+    },
+    "blight": {
+        "deskripsi": "Hawar daun bakteri (blight) disebabkan oleh bakteri Xanthomonas oryzae pv. oryzae. Gejala awal berupa bercak air kecil yang memanjang di tepi daun, kemudian membesar dan memanjang ke arah atas daun, berwarna kuning kecoklatan. Pada serangan berat, seluruh daun mengering dan tanaman mati.",
+        "penyebab": "Infeksi bakteri Xanthomonas oryzae yang menyebar melalui percikan air hujan, angin, dan peralatan pertanian yang terkontaminasi.",
+        "pencegahan": "Gunakan varietas tahan hawar daun, tanam pada musim yang sesuai, sanitasi lahan, pengelolaan air yang baik, dan hindari penggunaan nitrogen berlebihan. Aplikasi bakterisida seperti tembaga hidroksida dapat digunakan pada kondisi rawan."
+    },
+    "tungro": {
+        "deskripsi": "Penyakit tungro disebabkan oleh infeksi kombinasi Rice tungro bacilliform virus (RTBV) dan Rice tungro spherical virus (RTSV) yang ditularkan oleh wereng hijau (Nephotettix virescens). Gejala khas berupa daun menguning dari pangkal ke ujung, tanaman kerdil, dan anakan sedikit. Tanaman yang terinfeksi berat akan mati sebelum berproduksi.",
+        "penyebab": "Infeksi virus RTBV dan RTSV yang ditularkan oleh wereng hijau saat menghisap cairan tanaman.",
+        "pencegahan": "Gunakan varietas tahan tungro, tanam serempak, sanitasi lahan dengan membersihkan gulma, pengendalian populasi wereng hijau dengan insektisida berbahan aktif seperti imidakloprid atau buprofezin, dan rotasi tanaman."
+    }
+}
